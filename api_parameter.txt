@@ -1,0 +1,106 @@
+service = {
+    # 1. 포털 분류별, 지역별, 기간별 습득물 정보 조회
+    'getPtLosfundInfoAccToClAreaPd' : {
+        'PRDT_CL_CD_01' : '', # 뮬품분류1(선택), 항목크기 6, 대분류
+        'PRDT_CL_CD_02' : '', # 뮬품분류2(선택), 항목크기 6, 중분류
+        'CLR_CD' : '',        # 색상코드(선택), 항목크기 8, 습득물 색상
+        'START_YMD' : '',     # 습득일자(선택), 항목크기 8, 검색시작일
+        'END_YMD' : '',       # 습득일자(선택), 항목크기 8, 검색종료일
+        'N_FD_LCT_CD' : '',   # 습득지역(선택), 항목크기 6, 습득지역
+        'pageNo' : '',        # 페이지 번호(선택), 항목크기 100, 페이지 번호
+        'numOfRows' : ''      # 목록 건수(선택), 항목크기 100, 목록 건수
+    }, 
+    # 2. 포털 습득물 명칭, 보관 장소별 습득물 정보 조회
+    'getPtLosfundInfoAccTpNmCstdyPlace' : {
+        'PRDT_NM': '',   # 물품명(선택), 항목크기 200
+        'DEP_PLACE': '마곡', # 보관장소(선택), 항목크기 200
+        'pageNo': '',    # 페이지번호(선택), 항목크기 100
+        'numOfRows': ''  # 목록 건수(선택), 항목크기 100
+    }, 
+    # 3. 포털 습득물 상세정보 조회
+    'getPtLosfundDetailInfo' : {
+        'ATC_ID' : '', # 관리ID(필수), 항목크기 17 
+        'FD_SN' : ''   # 습득순번(필수), 항목크기 3
+    }, 
+    # 4. 포털 습득물 위치기반 조회
+    'getPtLosfundInfoAccToLc' : {
+        'PRDT_NM' : '',   # 물품명(선택), 항목크기 200
+        'ADDR' : '',      # 기관도로명주소(선택), 항목크기 100
+        'PageNo' : '',    # 페이지 번호(선택), 항목크기 100
+        'numOfRows' : '' # 목록 건수(선택), 항목크기 100
+    }
+}
+
+
+response_1 = {
+'resultCode': '',
+'resultMag': '',
+    'Items': {
+        'rnum': '',
+        'atcId': '',
+        'fdSn': '',
+        'prdtClNm': '',
+        'clrNm': '',
+        'fdPrdtNm': '',
+        'fdSbjt': '',
+        'fdFilePathImg': '',
+        'depPlace': '',
+        'fdYmd': ''
+    }
+}
+
+response_2 = {
+'resultCode': '',
+'resultMag': '',
+    'Items': {
+        'rnum': '',
+        'atcId': '',
+        'fdSn': '',
+        'prdtClNm': '',
+        'clrNm': '',
+        'fdPrdtNm': '',
+        'fdSbjt': '',
+        'fdFilePathImg': '',
+        'depPlace': '',
+        'fdYmd': ''
+    }
+}
+
+response_3 = {
+    'resultCode': '',
+    'resultMag': '',
+    'Items': {
+        'fdPrdtNm': '',
+        'atcId': '',
+        'fdSn': '',
+        'fdFilePathImg': '',
+        'fdYmd': '',
+        'fdHor': '',
+        'fdPlace': '',
+        'prdtClNm': '',
+        'depPlace': '',
+        'csteSteNm': '',
+        'fndKeepOrgnSeNm': '',
+        'orgId': '',
+        'orgNm': '',
+        'tel': '',
+        'uniq': ''
+    }
+}
+
+response_4 = {
+    'resultCode': '',
+    'resultMag': '',
+    'Items': {
+        'rnum': '',
+        'atcId': '',
+        'fdSn': '',
+        'prdtClNm': '',
+        'clrNm': '',
+        'fdPrdtNm': '',
+        'fdSbjt': '',
+        'depPlace': '',
+        'fdYmd': '',
+        'addr': ''
+    }
+}
